@@ -1,0 +1,363 @@
+
+<html lang="en">
+    <head>
+    <title>
+    Natural Playgrounds Toolkit
+    </title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: filesystem: https://ssl.gstatic.com https://fonts.googleapis.com https://www.youtube.com http://player.vimeo.com; style-src 'self' 'unsafe-inline'; media-src * content:; img-src 'self' data: content:;">
+    <script type="text/javascript" src="file:///android_asset/www/cordova.js"></script>
+    <link rel="stylesheet" type="text/css" href="book/styles/app.css" />
+    </head>
+    <body class="book chapter"
+    >
+        <div id="wrapper">
+<div class="masthead">
+    <ul>
+        <li class="masthead-project-name"><a href="../../index.html">Natural Playgrounds Toolkit</a></li>
+    </ul>
+    <div class="controls">
+    </div>
+</div><!--.masthead-->
+<div class="nav-buttons">
+	<a class="nav-back-button">&larr;</a>
+	<a class="nav-button" href="#nav">Contents</a>
+</div>
+<div class="content-logo">
+    <a href="../../index.html">
+        <img    src="../../assets/images/app/natural-playgrounds-logo.png"        class=""         />
+    </a>
+</div>
+	<div id="content">
+	</div><!--#content-->
+<div id="nav" class="non-printing">
+        <div class="nav-title">Natural Playgrounds Toolkit</div>
+        <div class="search">
+<form class="search" action="../../search.html" method="get">
+  <label for="search-box"></label>
+  <input type="text" id="search-box" class="search-box" name="query" placeholder="Search">
+  <input id="search-language" type="hidden" name="lang" value="en">
+</form>
+        </div><!--.search-->
+        <div class="nav-list">
+                <ol class="nav-project-home">
+                    <li><a href="../../index.html">Home</a></li>
+                </ol>
+    <ol>
+          <li class="
+           no-children toc-frontmatter">
+              <a href="../../book/text/0-3-contents.html" >
+                  Contents
+              </a>
+          </li>
+          <li class="
+           no-children toc-frontmatter">
+              <a href="../../book/text/0-4-introduction.html" >
+                  Introduction
+              </a>
+          </li>
+          <li class="
+           has-children">
+              <a href="../../book/text/01.html" >
+                  Section 1: Understand
+              </a>
+    <ol>
+          <li class="
+           no-children">
+              <a href="../../book/text/01.html" >
+                  The importance of play
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/01.html#what-children-need-to-develop" >
+                  What children need to develop
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/01.html#learning-through-play" >
+                  Learning through play
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/01.html#age-appropriate-play" >
+                  Age-appropriate play
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/01.html#outdoor-free-play" >
+                  Outdoor free play
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/01.html#playground-safety" >
+                  Playground safety
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/01.html#how-to-design-your-natural-playground" >
+                  How to design your natural playground
+              </a>
+          </li>
+    </ol>
+          </li>
+          <li class="
+           has-children">
+              <a href="../../book/text/02.html" >
+                  Section 2: Engage
+              </a>
+    <ol>
+          <li class="
+           no-children">
+              <a href="../../book/text/02.html" >
+                  Involving the community
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/02.html#how-to-handle-community-participation" >
+                  How to handle community participation
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/02.html#facilitating-community-meetings" >
+                  Facilitating community meetings
+              </a>
+          </li>
+    </ol>
+          </li>
+          <li class="
+           has-children">
+              <a href="../../book/text/03.html" >
+                  Section 3: Assess
+              </a>
+    <ol>
+          <li class="
+           no-children">
+              <a href="../../book/text/03.html" >
+                  What is a needs assessment?
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/03.html#how-to-do-a-needs-assessment" >
+                  How to do a needs assessment
+              </a>
+          </li>
+    </ol>
+          </li>
+          <li class="
+           has-children">
+              <a href="../../book/text/04.html" >
+                  Section 4: Act
+              </a>
+    <ol>
+          <li class="
+           no-children">
+              <a href="../../book/text/04.html" >
+                  What is a playground action plan?
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/04.html#how-to-write-a-playground-action-plan" >
+                  How to write a playground action plan
+              </a>
+          </li>
+    </ol>
+          </li>
+          <li class="
+           has-children">
+              <a href="../../book/text/05.html" >
+                  Section 5: Monitor and Evaluate
+              </a>
+    <ol>
+          <li class="
+           no-children">
+              <a href="../../book/text/05.html" >
+                  What is monitoring and evaluation?
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/05.html#how-to-approach-monitoring-and-evaluation" >
+                  How to approach monitoring and evaluation
+              </a>
+          </li>
+    </ol>
+          </li>
+          <li class="
+           has-children">
+              <a href="../../book/text/06-00.html" >
+                  Toolbox
+              </a>
+    <ol>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-00.html" >
+                  Tools at a glance
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-01.html" >
+                  Tool 1: Partner Finder
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-02.html" >
+                  Tool 2: Playground Map
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-03.html" >
+                  Tool 3: Playground Dreams
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-04.html" >
+                  Tool 4: Resource Inventory
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-05.html" >
+                  Tool 5: Issue Finder
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-06.html" >
+                  Tool 6: Risk–Benefit Assessment
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-07.html" >
+                  Tool 7: Formulating Objectives
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-08.html" >
+                  Tool 8: Activity Plan
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-09.html" >
+                  Tool 9: Monitoring Summary
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-10.html" >
+                  Tool 10: Monitoring Safety
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-11.html" >
+                  Tool 11: Monitoring Maintenance
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/06-12.html" >
+                  Tool 12: Evaluate Results
+              </a>
+          </li>
+    </ol>
+          </li>
+          <li class="
+           has-children">
+              <a href="../../book/text/07.html" >
+                  Facilitator’s Guide
+              </a>
+    <ol>
+          <li class="
+           no-children">
+              <a href="../../book/text/07.html" >
+                  Notes for facilitators
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/07.html#using-advocacy" >
+                  Using advocacy
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/07.html#using-participatory-workshops" >
+                  Using participatory workshops
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/07.html#using-coaching" >
+                  Using coaching
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/07.html#using-group-study" >
+                  Using group study
+              </a>
+          </li>
+          <li class="
+           no-children">
+              <a href="../../book/text/07.html#using-guided-self-study" >
+                  Using guided self-study
+              </a>
+          </li>
+    </ol>
+          </li>
+          <li class="
+           no-children toc-endmatter">
+              <a href="../../book/text/50-01-glossary.html" >
+                  Glossary
+              </a>
+          </li>
+          <li class="
+           no-children toc-endmatter">
+              <a href="../../book/text/50-02-references.html" >
+                  References
+              </a>
+          </li>
+    </ol>
+        </div><!--.nav-list-->
+        <div class="widgets">
+        </div><!--.widgets-->
+</div><!--#nav-->
+    <div id="footer">
+        <div class="footer-content">
+            <div class="logos">
+                <div class="logo">
+                    <img    src="../../assets/images/app/penreach-logo.png"        class=""         />
+                </div>
+                <div class="logo">
+                    <img    src="../../assets/images/app/rff-logo.png"        class=""         />
+                </div>
+            </div>
+            <p>
+                Developed by <a href="https://penreach.co.za/">Penreach</a> with support from the <a href="https://www.rogerfedererfoundation.org/">Roger Federer Foundation</a>. Produced by <a href="https://electricbookworks.com">Electric Book Works</a>.
+            </p>
+        </div><!--.footer-content-->
+    </div><!--#footer-->
+	<script src="../../assets/js/bundle.js"></script>
+</div><!--#wrapper-->
+</body>
+</html>

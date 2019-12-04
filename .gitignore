@@ -1,0 +1,14 @@
+node_modules
+plugins
+platforms
+
+# Here be secrets
+build.json
+
+# Android Studio user settings
+.idea
+
+# Expansion files
+*.zip
+main.*.com*
+patch.*.com*

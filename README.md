@@ -29,6 +29,7 @@ In the event that any of the videos for this project have been updated, you will
 Download the updated video files and place them in the folder called `patch`. In order to create the patch file, run the following commands in the terminal:
 
 `zip -0 -j patch patch/*`
+
 `mv patch.zip patch.1.com.electricbookworks.rff.npt.obb`
 
 This `obb` file is now ready to be uploaded to the Google Play store as a patch to the original expansion file. 
@@ -42,12 +43,15 @@ To update the content of the app, build app-ready HTML in the `Roger-Federer-Fou
 Now we can build the new app file. 
 
 `cordova platform remove android`
+
 `cordova platform add android@8.0.0`
 
 This is the point where, if we need to, we should install the neccessary cordova plugins. 
 
 `cordova plugin add cordova-plugin-file`
+
 `cordova plugin add cordova-plugin-file-opener2`
+
 `cordova plugin add https://github.com/erobertson42/cordova-plugin-xapkreader.git#cordova-9 --variable XAPK_PUBLIC_KEY="YOUR_GOOGLE_PLAY_LICENSE_KEY" --variable XAPK_EXPANSION_AUTHORITY="com.electricbookworks.rff.npt"`
 
 The license key needs to come from the Google Play developers console, under Development Tools > Services and APIs in the sidebar. It looks like `MIIBIjANBgk...DAQAB`.
@@ -74,7 +78,7 @@ Once you're satisfied with the app, it's time to build a signed release version 
 You will need a few important components to build the release version:
 
 * keystore: this is a private cryptographic key linked to the specific application. It is stored by Electric Book Works, and needs to be downloaded onto your local machine so that you can use its filepath.
-* build.json: this is a JSON file that contains the path to the keystore as well as some important information and passwords. These details are kept by Electric Book Works.
+* build.json: this is a JSON file that contains the path to the keystore as well as some important information and passwords. These details are kept by Electric Book Works. The file `build-example.json` has been included in the repo as a template for the structure of `build.json`.
 
 You also need to increment the version number in the header of `config.xml`. Google Play will not let you upload an app with an exisiting version number.
 
