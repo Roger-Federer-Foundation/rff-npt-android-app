@@ -15,4 +15,129 @@ var index = elasticlunr(function () {
     this.addField('content');
 });
 var store = [
+                {
+                    'title': "Title page",
+                    'excerpt': "",
+                    'url': "book/text/0-1-titlepage.html"
+                },
+                {
+                    'title': "Copyright",
+                    'excerpt': "Natural Playgrounds ToolkitText © Talita van der Walt for Penreach",
+                    'url': "book/text/0-2-copyright.html"
+                },
+                {
+                    'title': "Contents",
+                    'excerpt': "",
+                    'url': "book/text/0-3-contents.html"
+                },
+                {
+                    'title': "Introduction",
+                    'excerpt': "When children play in the early years of their lives, they are developing skills, habits, and attitudes that become the&hellip;",
+                    'url': "book/text/0-4-introduction.html"
+                },
+                {
+                    'title': "Section 1: Understand",
+                    'excerpt': "Play develops skills, habits and attitudes that stay with children for the rest of their lives.  <video controls=\"controls\"&hellip;",
+                    'url': "book/text/01.html"
+                },
+                {
+                    'title': "Section 2: Engage",
+                    'excerpt': "Community members are experts on what is happening in their surrounding area.  ResourcesA supply of&hellip;",
+                    'url': "book/text/02.html"
+                },
+                {
+                    'title': "Section 3: Assess",
+                    'excerpt': "A needs assessment is a starting point for generating new ideas. It is best to do a needs&hellip;",
+                    'url': "book/text/03.html"
+                },
+                {
+                    'title': "Section 4: Act",
+                    'excerpt': "Action plans turn dreams into reality. A playground action plan is a tool that shows your community and&hellip;",
+                    'url': "book/text/04.html"
+                },
+                {
+                    'title': "Section 5: Monitor and Evaluate",
+                    'excerpt': "Monitoring and evaluation is an important part of every initiative and project as it allows you to track&hellip;",
+                    'url': "book/text/05.html"
+                },
+                {
+                    'title': "Toolbox",
+                    'excerpt': "Find out who cares about your community or school by defining who has an interest or investment in it. <h3&hellip;",
+                    'url': "book/text/06-00.html"
+                },
+                {
+                    'title': "Toolbox",
+                    'excerpt': "Find out who cares about your community or school by defining who has an interest or investment in it. <h2&hellip;",
+                    'url': "book/text/06-01.html"
+                },
+                {
+                    'title': "Tool 2: Playground Map",
+                    'excerpt': "Explore how people experience the playground by mapping the playground and how they use it.  Needs&hellip;",
+                    'url': "book/text/06-02.html"
+                },
+                {
+                    'title': "Tool 3: Playground Dreams",
+                    'excerpt': "This tool forms part of your needs assessment.When do you use the Playground Dreams tool?",
+                    'url': "book/text/06-03.html"
+                },
+                {
+                    'title': "Tool 4: Resource Inventory",
+                    'excerpt': "Explore what resources are available by listing resources in different categories.  Needs AssessmentA systematic&hellip;",
+                    'url': "book/text/06-04.html"
+                },
+                {
+                    'title': "Tool 5: Issue Finder",
+                    'excerpt': "This tool forms part of your needs assessment. See Section 1 for playground safety regulations&hellip;",
+                    'url': "book/text/06-05.html"
+                },
+                {
+                    'title': "Tool 6: Risk–Benefit Assessment",
+                    'excerpt': "Explore the risks and benefits of playing with loose parts by weighing the likelihood of dangers against the&hellip;",
+                    'url': "book/text/06-06.html"
+                },
+                {
+                    'title': "Tool 7: Formulating Objectives",
+                    'excerpt': "Formulate smart objectives by describing exactly what you want to achieve. When do you use the Formulating Objectives tool?&hellip;",
+                    'url': "book/text/06-07.html"
+                },
+                {
+                    'title': "Tool 8: Activity Plan",
+                    'excerpt': "Ensure that everything you have planned can be completed on time and on budget by creating an activity plan&hellip;",
+                    'url': "book/text/06-08.html"
+                },
+                {
+                    'title': "Tool 9: Monitoring Summary",
+                    'excerpt': "Ensure that everything you planned gets done by monitoring implementation. When do you use the Monitoring Summary tool?&hellip;",
+                    'url': "book/text/06-09.html"
+                },
+                {
+                    'title': "Tool 10: Monitoring Safety",
+                    'excerpt': "Ensure that the playground is a safe place by monitoring safety standards. When do you use the Monitoring&hellip;",
+                    'url': "book/text/06-10.html"
+                },
+                {
+                    'title': "Tool 11: Monitoring Maintenance",
+                    'excerpt': "Ensure that your natural playground remains safe by monitoring maintenance issues. When do you use the Monitoring Maintenance&hellip;",
+                    'url': "book/text/06-11.html"
+                },
+                {
+                    'title': "Tool 12: Evaluate Results",
+                    'excerpt': "Ensure that the natural playground offers a variety of opportunities by evaluating it against developmental play needs. When do&hellip;",
+                    'url': "book/text/06-12.html"
+                },
+                {
+                    'title': "Facilitator's Guide",
+                    'excerpt': "These notes were developed to guide facilitators of the Natural Playgrounds Toolkit. To meet the needs of each individual group,&hellip;",
+                    'url': "book/text/07.html"
+                },
+                {
+                    'title': "Glossary",
+                    'excerpt': "",
+                    'url': "book/text/50-01-glossary.html"
+                },
+                {
+                    'title': "References",
+                    'excerpt': "",
+                    'url': "book/text/50-02-references.html"
+                },
 ];

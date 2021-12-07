@@ -9,8 +9,7 @@
 
 
 
-
-var urls = []
+var urls = ['../../book/text/0-1-titlepage.html','../../book/text/0-2-copyright.html','../../book/text/0-3-contents.html','../../book/text/0-4-introduction.html','../../book/text/01.html','../../book/text/02.html','../../book/text/03.html','../../book/text/04.html','../../book/text/05.html','../../book/text/06-00.html','../../book/text/06-01.html','../../book/text/06-02.html','../../book/text/06-03.html','../../book/text/06-04.html','../../book/text/06-05.html','../../book/text/06-06.html','../../book/text/06-07.html','../../book/text/06-08.html','../../book/text/06-09.html','../../book/text/06-10.html','../../book/text/06-11.html','../../book/text/06-12.html','../../book/text/07.html','../../book/text/50-01-glossary.html','../../book/text/50-02-references.html']
 
 
 
