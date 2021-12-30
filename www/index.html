@@ -33,11 +33,21 @@
 </div>
 	<div id="content">
 <h1 id="natural-playgrounds-toolkit">Natural Playgrounds Toolkit</h1>
-<div class="video-loading-notification-wrapper visuallyhidden">
-    <div class="video-loading-notification">
-        Please wait while the video files download.
+<div id="videopanel" class="video-loading-notification-wrapper visuallyhidden">
+    <div id="videomessage" class="video-loading-notification">
     </div>
-    <div class="lds-dual-ring"></div>
+    <pre id="videostatuslist">
+    </pre>
+    <div id="videomenu">
+    <button id="videocopy">Copy files from Local Storage</button>
+    <button id="videodownload">Download files from the Internet</button>
+    <button id="videoskip">Skip this for now</button>
+    </div>
+
+    <input type="file" class="visuallyhidden" 
+       id="videofilelist" name="videofilelist"
+       accept="*/*" multiple>
+
 </div>
 <div class="opener-image">                    <img src="assets/images/app/cover-photo.jpg" alt="" />            </div>
 <p>The Natural Playgrounds Toolkit helps to develop a deeper understanding of the importance of play in early learning and provides teachers, parents and communities with the knowledge and skills to build a playground for young children out of locally available resources.</p>
