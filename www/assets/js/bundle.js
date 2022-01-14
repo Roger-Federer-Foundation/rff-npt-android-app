@@ -3601,7 +3601,7 @@ function manageVideos()
          showVideoMenu();
          return;
        }
-       if ((vids[vi].status=="AVAILABLE")||(!vids[vi].fromURL)) { //we don't need it or have a URL to get it from
+       if ((vids[vi].status=="AVAILABLE")||(!vids[vi].fromURL)) { //we don't need it or don't have a URL to get it from
          next();
          return; }
 
@@ -3615,15 +3615,16 @@ function manageVideos()
        };
        fileTransfer.download(
          vids[vi].fromURL,
-         cordova.file.dataDirectory+vids[vi].name,
+         cordova.file.dataDirectory+'TMP_'+vids[vi].name,
          ()=>{
            console.log("got file")
+           renameFile("TMP_"+vids[vi].name,vids[vi].name)
            vids[vi].status="AVAILABLE";
            vids.fromURL=null; //clear any URL
            next();
          },
          ()=>{
-           console.log("failed")
+           console.log("failed download")
            vids[vi].status="MISSING";
            vids.fromURL=null; //clear any URL
            next();
@@ -3632,8 +3633,16 @@ function manageVideos()
      }
      next();
    }
-
    checkAllStatus(); //actually start these checks
+}
+
+function renameFile(oldName,newName)
+{
+  window.resolveLocalFileSystemURL(cordova.file.dataDirectory, (dirEntry) => {
+    dirEntry.getFile(oldName, {  }, (oldFile)=>{
+        oldFile.moveTo(dirEntry,newName,()=>console.log("rename complete"),()=>console.log("rename failed"));
+    });
+  });
 }
 
 function copyFileToStorage(file,pcb,scb,fcb) {
