@@ -3647,7 +3647,7 @@ function renameFile(oldName,newName)
 
 function copyFileToStorage(file,pcb,scb,fcb) {
   window.resolveLocalFileSystemURL(cordova.file.dataDirectory, (dirEntry) => {
-    dirEntry.getFile(file.name, {
+    dirEntry.getFile("TMP_"+file.name, {
         create: true,
         exclusive: false
       }, (fileEntry) => {
@@ -3657,6 +3657,7 @@ function copyFileToStorage(file,pcb,scb,fcb) {
           function writeNext() {
             var sz = Math.min(BLOCK_SIZE, file.size - written);
             if (sz<=0) {
+              renameFile("TMP_"+file.name,file.name);
               scb();
               return; //all done
             }
