@@ -11,30 +11,30 @@ A number of Cordova plugins are required to ensure the full functionality of the
 | cordova-plugin-filepath | Reading filepaths for file transfer |
 | cordova-plugin-file-opener2 | Opening PDF files included in the app |
 | cordova-plugin-file-transfer-latest | Copying files from SD card to device |
-| cordova.plugins.diagnostic | Determing location of SD card |
-| cordova-plugin-insomnia | Keep app from sleeping while video files transfer |
-| cordova-plugin-block-app-exit | Prevent users from accessing settings outside the managed environment |
+| cordova.plugins.diagnostic | Determining location of SD card |
+| cordova-plugin-insomnia | Preventing app from sleeping while video files transfer |
+| cordova-plugin-block-app-exit | Preventing users from accessing settings outside the managed environment |
 
 ## If this is your first time...
 
-If this is the first time you're setting up your machine to build the app, you'll need to install
+Before building the app for the first time, ensure your system includes
 
-* Android studio latest (instructions [here](https://developer.android.com/studio/install))
-* Java Developer Kit 11 (instructions [here](https://www.oracle.com/java/technologies/downloads/#java11))
-* Cordova latest (instructions [here](https://cordova.apache.org/docs/en/latest/guide/cli/#installing-the-cordova-cli))
+* Android studio [latest] (instructions [here](https://developer.android.com/studio/install))
+* Java Developer Kit [11] (instructions [here](https://www.oracle.com/java/technologies/downloads/#java11))
+* Cordova [latest] (instructions [here](https://cordova.apache.org/docs/en/latest/guide/cli/#installing-the-cordova-cli))
 
 ## Build
 
 ### HTML
 
-To update the content of the app, build app-ready HTML in the `Roger-Federer-Foundation/rff-natural-playgrounds` repo. Copy the contents of the resulting `_site/app/www` into this repo's `www` folder. 
+To update the contents of the app, build app-ready HTML in the `Roger-Federer-Foundation/rff-natural-playgrounds` repo. Copy the contents of the resulting `_site/app/www` into this repo's `www` folder. 
 
 ### APK
 
 1. Add the correct version of cordova-android.
 
 - `cordova platform remove android`
-- `cordova platform add android@11.0.0`
+- `cordova platform add android@10`
 
 2. Install the plugins.
 
