@@ -22,7 +22,7 @@
     "cordova-plugin-file-transfer": "git+https://github.com/apache/cordova-plugin-file-transfer.git",
     "cordova-plugin-filepath": "^1.6.0",
     "cordova-plugin-insomnia": "git+https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git",
-    "cordova.plugins.diagnostic": "^6.1.0"
+    "cordova.plugins.diagnostic": "^7.1.1"
   },
   "cordova": {
     "plugins": {
