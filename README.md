@@ -34,10 +34,7 @@ To update the contents of the app, copy the entire `www` folder from the `Roger-
 
 ### JavaScript
 
-The interactivity in the app is all contained in one JavaScript file, at `www/assets/js/bundle.js`. The functionality pertaining to copying video files from an SD card is currently between lines 2493 and 2752 of this file.
-
-Some notable features about this functionality:
-- 
+The JavaScript for the app-specific functionality can be found in www/assets/js/bundle-android.js. This bundles two features: the first for copying videos from an SD card into the app's storage folder on the device, and the second for handling PDFs within the app.
 
 ### APK
 
@@ -81,7 +78,7 @@ Once you're satisfied with the app, build a signed Android App Bundle to upload 
 A few important components are required to build the release version:
 
 * keystore: this is a private cryptographic key linked to the specific application. It is stored by Electric Book Works, and needs to be downloaded onto your local machine so that you can use its filepath.
-* build.json: this is a JSON file that contains the path to the keystore as well as some important information and passwords. These details are kept by Electric Book Works. The file `build-example.json` has been included in the repo as a template for the structure of `build.json`.
+* build.json: this is a JSON file that contains the path to the keystore as well as some important information and passwords. This should be placed into the root of this directory.
 
 Increment the version number in the header of `config.xml`. Google Play will not let you upload an app with an exisiting version number.
 

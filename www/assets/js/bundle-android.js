@@ -1,7 +1,8 @@
+/*
+ANDROID-COPY-VIDEOS.JS
+*/
 
-
-
-    /* For this project, the video files need to be copied from an SD card
+/* For this project, the video files need to be copied from an SD card
 into the app data file upon first launch of the app.
 
 We can't include the videos in the app itself, due to bandwidth limitations as
@@ -305,7 +306,11 @@ document.addEventListener("deviceready", function() {
     }
 });
 
-    // Android apps need to use a plugin to open local pdf files
+/*
+ANDROID-OPEN-PDF.JS
+*/
+
+// Android apps need to use a plugin to open local pdf files
 // but these files first need to be moved from inside the app to
 // the external data directory, because the pdf viewer doesn't have
 // permission to go inside the app to look for them.
