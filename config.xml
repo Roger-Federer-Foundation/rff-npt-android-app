@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.electricbookworks.rff.npt" version="1.0.14" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.electricbookworks.rff.npt" version="1.0.16" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Natural Playgrounds Toolkit</name>
     <description>
         A manual for building playgrounds out of locally available resources.
@@ -22,30 +22,6 @@
         <preference name="SplashShowOnlyFirstTime" value="true"/>
         <preference name="android-minSdkVersion" value="22" />
         <preference name="android-targetSdkVersion" value="32" />
-        <!-- Portrait
-        <splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png"/>
-        <splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png"/>
-        <splash density="port-hdpi" src="res/screen/android/splash-port-hdpi.png"/>
-        <splash density="port-xhdpi" src="res/screen/android/splash-port-xhdpi.png"/>
-        <splash density="port-xxhdpi" src="res/screen/android/splash-port-xxhdpi.png"/>
-        <splash density="port-xxxhdpi" src="res/screen/android/splash-port-xxxhdpi.png"/>
-      -->
-        <!-- Landscape
-        <splash density="land-ldpi" src="res/screen/android/splash-land-ldpi.png"/>
-        <splash density="land-mdpi" src="res/screen/android/splash-land-mdpi.png"/>
-        <splash density="land-hdpi" src="res/screen/android/splash-land-hdpi.png"/>
-        <splash density="land-xhdpi" src="res/screen/android/splash-land-xhdpi.png"/>
-        <splash density="land-xxhdpi" src="res/screen/android/splash-land-xxhdpi.png"/>
-        <splash density="land-xxxhdpi" src="res/screen/android/splash-land-xxxhdpi.png"/>
-      -->
-        <!-- Other
-        <splash density="ldpi" src="res/screen/android/splash-port-ldpi.png"/>
-        <splash density="mdpi" src="res/screen/android/splash-port-mdpi.png"/>
-        <splash density="hdpi" src="res/screen/android/splash-port-hdpi.png"/>
-        <splash density="xhdpi" src="res/screen/android/splash-port-xhdpi.png"/>
-        <splash density="xxhdpi" src="res/screen/android/splash-port-xxhdpi.png"/>
-        <splash density="xxxhdpi" src="res/screen/android/splash-port-xxxhdpi.png"/>
-      -->
         <preference name="AndroidPersistentFileLocation" value="Internal" />
         <preference name="AndroidPersistentFileLocation" value="Compatibility" />
         <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,assets,root" />
