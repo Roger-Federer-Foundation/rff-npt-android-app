@@ -12,8 +12,11 @@ A number of Cordova plugins are required to ensure the full functionality of the
 | cordova-plugin-file-opener2 | Opening PDF files included in the app |
 | cordova-plugin-file-transfer-latest | Copying files from SD card to device |
 | cordova.plugins.diagnostic | Determining location of SD card |
-| cordova-plugin-insomnia | Preventing app from sleeping while video files transfer |
 | cordova-plugin-block-app-exit | Preventing users from accessing settings outside the managed environment |
+| cordova-plugin-elk-files-share | Copying files from SD card to device |
+| com-darryncampbell-cordova-plugin-intent | Required for file share |
+| cordova-plugin-progressdialog | Required for file share |
+
 
 ## If this is your first time...
 
@@ -27,7 +30,14 @@ Before building the app for the first time, ensure your system includes
 
 ### HTML
 
-To update the contents of the app, build app-ready HTML in the `Roger-Federer-Foundation/rff-natural-playgrounds` repo. Copy the contents of the resulting `_site/app/www` into this repo's `www` folder. 
+To update the contents of the app, copy the entire `www` folder from the `Roger-Federer-Foundation/rff-npt-built-html` repo into the root of this repo.
+
+### JavaScript
+
+The interactivity in the app is all contained in one JavaScript file, at `www/assets/js/bundle.js`. The functionality pertaining to copying video files from an SD card is currently between lines 2493 and 2752 of this file.
+
+Some notable features about this functionality:
+- 
 
 ### APK
 
@@ -46,6 +56,9 @@ To update the contents of the app, build app-ready HTML in the `Roger-Federer-Fo
 - `cordova plugin add cordova.plugins.diagnostic`
 - `cordova plugin add cordova-plugin-insomnia`
 - `cordova plugin add https://github.com/digitres/cordova-plugin-block-app-exit.git`
+- `cordova plugin add com-darryncampbell-cordova-plugin-intent`
+- `cordova plugin add cordova-plugin-progressdialog`
+- `cordova plugin add https://github.com/digitres/cordova-plugin-elkFilesShare.git`
 
 3. Build the app.
 
@@ -55,15 +68,11 @@ The output of this command will end with the filepath of the built `apk`. Instal
 
 ## Test
 
+First, ensure that the [ELK File Manager](https://play.google.com/store/apps/details?id=org.rff.digitres.elkfilemanager) app is installed. Open it, and grant it any necessary permissions, before continuing with testing. Then:
+
 - Copy the `apk` onto an Android device. 
 - If testing the video transfer functionality, copy the videos files listed [here](https://rff.ebw.co/URLList.json) to a folder called `npt` on an SD card, and insert the card into the device.
 - Install the app.
-
-The following important features should be tested, alongside a review of any content changes that have been made:
-
-- The modal on the home page of the app should be used to copy the video files from the SD card. The video playback should then be tested in the introduction chapter, as well as in Sections 1, 2, 3, and the Facilitators Guide.
-- The "Printable PDF" button on the home page should be used to view the PDF version of the book.
-- The block-user-exit functionality should be tested: users should not be able to access the device settings from the notification drawer, for instance.
 
 ## Release
 
