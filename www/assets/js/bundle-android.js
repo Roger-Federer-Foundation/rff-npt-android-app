@@ -37,6 +37,8 @@ function ebDownloadVideosFromTheInternet() {
         .then(function (text) {
             const jsonData = JSON.parse(text);
             const dataPairList = jsonData.dataPairList;
+            console.log("IMPORTING");
+            console.log(dataPairList);
 
             let j = 1;
             // Loop over each pair of [dst-filename, src-url] in the json data
@@ -65,103 +67,96 @@ function ebDownloadVideosFromTheInternet() {
     });
 }
 
-function ebCheckForSDCard() {
-    "use strict";
+   function updateVideoStatus(message,showMenu, vids)
+   {
+     document.getElementById("videomenu").classList.toggle("visuallyhidden",!showMenu);
+     document.getElementById("videomessage").innerHTML=message;
+     document.getElementById("videostatuslist").innerHTML=vids.map(v=>v.name+" - "+v.status).join("\n");
+   }
 
-    // Only do this part once
-    if (window.localStorage.getItem("import-done") !== "true") {
-        
-        // Use the cordova.plugins.diagnostic plugin to get the SD card name
-        cordova.plugins.diagnostic.getExternalSdCardDetails(
-            function (data) {
+   function showVideoMenu() {
+   //    // let required=needVids();
+       document.getElementById("videopanel").classList.toggle("visuallyhidden");
+   //     if (!required) return;
+        let vids = filelist.map(n=>({ name:n, status:"Missing" }));
 
-                if (data.length === 0) {
-
-                    // If no SD card is detected in the device, go online
-                    ebActivateVideoLoadingMessage();
-                    ebDownloadVideosFromTheInternet();
-
-                } else {
-
-                    var sdCardRoot = data[0].path;
-                    cordova.plugins.ElkFilesShare.importFile (
-                        [sdCardRoot + "/npt/"],
-                        function(result){
-                            console.log(result);
-                            window.localStorage.setItem("import-done", "true");
-                        },
-                        function(err){
-                            console.log(err);
-                        }
-                    );
-                }
-            },
-            function (error) {
-                console.log(error);
-            }
-        );
-    }
-
-    function checkWhetherItsDone () {
-        window.resolveLocalFileSystemURL(
-            cordova.file.dataDirectory + filelist[3],
-        
-            // If the file is there, dismiss the popup
-            // NOTE: This timeout is not a fancy fix, will need to do something
-            // like filesize detection is we want a more accurate timer on the 
-            // dismiss call.
-            function success() {
-                setTimeout(function(){cordova.plugin.progressDialog.dismiss()}, 30000);
-            },
-        
-            // Else, try again
-            function failure() {
-                checkWhetherItsDone();
-            }
-        );
-    }
-
-    window.plugins.intentShim.getIntent(
-        function(intent) {
-            
-            if (intent.action == 'android.intent.action.SEND_MULTIPLE' && intent.hasOwnProperty('clipItems')) {
-                
-                if (intent.clipItems.length > 0) {
-                
-                    var targetSaveDirectory = cordova.file.dataDirectory
-                    
-                    var params = [
-                        intent.clipItems,
-                        targetSaveDirectory
-                    ];
-
-                    cordova.plugin.progressDialog.init({
-                        // theme : 'HOLO_DARK',
-                        progressStyle : 'SPINNER',
-                        cancelable : true,
-                        title : 'Please Wait...',
-                        message : 'Copying files to application storage ...',
-                    });
-
-                    cordova.plugins.ElkFilesShare.processFile(
-                        params,
-                        function(result) {
-                            console.log(result);
-                            checkWhetherItsDone();
-                        },
-                        function(err) {
-                            console.log(err);
-                            cordova.plugin.progressDialog.dismiss();
-                        }
-                    );
-                }
-            }
-        },
-        function () {
-            console.log('Error getting launch intent');
+        updateVideoStatus("Some video files are required by this application.",true,vids);
+        //bind the buttons
+        document.getElementById("videocopy").onclick=()=>{
+          cordova.plugins.ElkFilesShare.importFile(
+                ["NPT"],
+                 function(result){
+                     console.log(result);
+                  // updateVideoStatus("Importing using ELK File manager",false)
+                 },
+                 function(err){
+                 console.log(err);
+                 alert(err)
+                 }
+          );
+         // document.getElementById("videofilelist").click();
         }
-    );
-}
+        document.getElementById("videodownload").onclick=()=>{
+          ebActivateVideoLoadingMessage();
+          ebDownloadVideosFromTheInternet();
+        }
+        document.getElementById("videoskip").onclick=()=>{
+          document.getElementById("videopanel").classList.toggle("visuallyhidden",true);
+        }
+
+        //when files are selected
+        document.getElementById("videofilelist").onchange=()=>{
+          let files=document.getElementById("videofilelist").files;
+          console.log(files);
+          copyFromFileList(files);
+        }
+   }
+
+//function ebCheckForSDCard() {
+//    "use strict";
+//
+//    // Only do this part once
+//    if (window.localStorage.getItem("import-done") !== "true") {
+//        // Use the cordova.plugins.diagnostic plugin to get the SD card name
+//        cordova.plugins.diagnostic.getExternalSdCardDetails(
+//            function (data) {
+//
+//                if (data.length === 0) {
+//
+//                    // If no SD card is detected in the device, go online
+//                    ebActivateVideoLoadingMessage();
+//                    ebDownloadVideosFromTheInternet();
+//
+//                } else {
+//
+//                }
+//            },
+//            function (error) {
+//                console.log(error);
+//            }
+//        );
+//    }
+
+//    function checkWhetherItsDone () {
+//        window.resolveLocalFileSystemURL(
+//            cordova.file.dataDirectory + filelist[3],
+//
+//            // If the file is there, dismiss the popup
+//            // NOTE: This timeout is not a fancy fix, will need to do something
+//            // like filesize detection is we want a more accurate timer on the
+//            // dismiss call.
+//            function success() {
+//                setTimeout(function(){
+//                    window.localStorage.setItem("import-done","true");
+//                    cordova.plugin.progressDialog.dismiss();
+//                }, 30000);
+//            },
+//            function failure() {
+//               checkWhetherItsDone();
+//            }
+//        );
+//    }
+
 
 function ebRequestExternalSdPermission() {
     "use strict";
@@ -175,7 +170,7 @@ function ebRequestExternalSdPermission() {
     
             case cordova.plugins.diagnostic.permissionStatus.GRANTED:
             console.log("Permission granted");
-            ebCheckForSDCard();
+            showVideoMenu();
             break;
     
             case cordova.plugins.diagnostic.permissionStatus.DENIED:
@@ -191,7 +186,7 @@ function ebRequestExternalSdPermission() {
     }, cordova.plugins.diagnostic.permission.WRITE_EXTERNAL_STORAGE);
 }
 
-function ebActivateVideoLoadingMessage () {
+function ebActivateVideoLoadingMessage() {
     "use strict";
 
     // This activates a loading screen, so that the user cannot interrupt
@@ -257,6 +252,51 @@ document.addEventListener("deviceready", function () {
             false
         );
     }
+
+    // Register SEND_MULTIPLE intent handler
+     window.plugins.intentShim.getIntent(
+         function(intent)
+         {
+            console.log("Sent Intent Received");
+            console.log(intent.action);
+             if ( intent.action == 'android.intent.action.SEND_MULTIPLE' && intent.hasOwnProperty('clipItems')) {
+                 var isImportDone = window.localStorage.getItem("import-done");
+                 if (intent.clipItems.length > 0 && isImportDone != "true") {
+                    var targetSaveDirectory = cordova.file.dataDirectory;
+                    var params = [intent.clipItems,targetSaveDirectory];
+                    cordova.plugin.progressDialog.init({
+                       progressStyle : 'SPINNER',
+                       cancelable : false,
+                       title : 'Please Wait...',
+                       message : 'Copying files to application storage ...',
+                    });
+
+                     cordova.plugins.ElkFilesShare.processFile(
+                         params,
+                         function(result){
+                            console.log(result);
+                             let vids = filelist.map(n=>({ name:n, status:"AVAILABLE" }));
+                             updateVideoStatus("Finished Copying files.",false, vids);
+                             window.localStorage.setItem("import-done","true");
+                             cordova.plugin.progressDialog.dismiss();
+                             setTimeout(function(){
+                                window.location.reload(true);
+                             },5000);
+                         },
+                         function(err){
+                             console.log(err);
+                             cordova.plugin.progressDialog.dismiss();
+                             alert(err);
+                         }
+                     );
+                 }
+             }
+         },
+         function()
+         {
+             console.log('Error getting launch intent');
+         }
+     );
 });
 
 
