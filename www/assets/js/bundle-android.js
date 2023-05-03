@@ -37,9 +37,6 @@ function ebDownloadVideosFromTheInternet() {
         .then(function (text) {
             const jsonData = JSON.parse(text);
             const dataPairList = jsonData.dataPairList;
-            console.log("IMPORTING");
-            console.log(dataPairList);
-
             let j = 1;
             // Loop over each pair of [dst-filename, src-url] in the json data
             dataPairList.forEach(function (datapair) {
