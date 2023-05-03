@@ -252,6 +252,15 @@ document.addEventListener("deviceready", function () {
             false
         );
     }
+    //Enable block app exit plugin
+      cordova.plugins.blockAppExit.enable(
+      function (result) {
+          console.log(result);
+        },
+      function (err) {
+          console.log("error: " + err);
+        }
+      );
 
     // Register SEND_MULTIPLE intent handler
      window.plugins.intentShim.getIntent(
