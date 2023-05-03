@@ -48,7 +48,9 @@
       },
       "cordova-plugin-progressdialog": {}
     },
-    "platforms": []
+    "platforms": [
+      "android"
+    ]
   },
   "dependencies": {
     "cordova-plugin-file-transfer-latest": "^2.0.2-dev"
