@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.electricbookworks.rff.npt" version="1.0.21" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.electricbookworks.rff.npt" version="1.0.23" xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
     <name>Natural Playgrounds Toolkit</name>
     <description>
         A manual for building playgrounds out of locally available resources.
@@ -26,6 +29,12 @@
         <preference name="AndroidPersistentFileLocation" value="Compatibility" />
         <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,assets,root" />
         <preference name="AndroidXEnabled" value="true" />
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+            <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+            <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+            <uses-permission android:name="android.permission.REORDER_TASKS" />
+        </config-file>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
