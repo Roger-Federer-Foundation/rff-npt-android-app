@@ -183,7 +183,7 @@ function ebRequestExternalSdPermission() {
             }
         }, function (error) {
             console.log(error);
-        },  osDetails.apiLevel < 33 ? cordova.plugins.diagnostic.permission.READ_EXTERNAL_STORAGE : cordova.plugins.diagnostic.permission.READ_MEDIA_VIDEO);
+        },  osDetails.apiLevel < 33 ? cordova.plugins.diagnostic.permission.WRITE_EXTERNAL_STORAGE : cordova.plugins.diagnostic.permission.READ_MEDIA_VIDEO);
 
     });
 }
