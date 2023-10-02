@@ -265,12 +265,13 @@ document.addEventListener("deviceready", function () {
       );
 
     // Register SEND_MULTIPLE intent handler
-     window.plugins.intentShim.getIntent(
+     window.plugins.intentShim.onIntent(
          function(intent)
          {
-            console.log("Sent Intent Received");
+
             console.log(intent.action);
              if ( intent.action == 'android.intent.action.SEND_MULTIPLE' && intent.hasOwnProperty('clipItems')) {
+                console.log("SEND_MULTIPLE Intent Received");
                  var isImportDone = window.localStorage.getItem("import-done");
                  if (intent.clipItems.length > 0 && isImportDone != "true") {
                     var targetSaveDirectory = cordova.file.dataDirectory;
@@ -302,12 +303,9 @@ document.addEventListener("deviceready", function () {
                      );
                  }
              }
-         },
-         function()
-         {
-             console.log('Error getting launch intent');
          }
      );
+
 });
 
 
