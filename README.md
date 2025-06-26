@@ -30,7 +30,10 @@ Before building the app for the first time, ensure your system includes
 
 ### HTML
 
-To update the contents of the app, copy the entire `www` folder from the `Roger-Federer-Foundation/rff-npt-built-html` repo into the root of this repo.
+To update the contents of the app:
+
+1. Generate the content in the [https://github.com/Roger-Federer-Foundation/rff-natural-playgrounds](https://github.com/Roger-Federer-Foundation/rff-natural-playgrounds) repo using the 'Create an app > Generate HTML only' option in its CLI `run` script.
+2. Copy the entire `_site/app/www` folder there into the root of this repo.
 
 ### JavaScript
 
